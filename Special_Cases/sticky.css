@@ -7,10 +7,14 @@ html{
 .main div{
   margin-top: 100px;
 }
+.stnav{
+  position: sticky;
+  top: 0;
+  z-index:  99;
+}
 nav {
   background-color: salmon;
-  position: fixed;
-  top: 0;
+
   width: 100%;
   height: 100px;
   display: flex;
@@ -28,6 +32,9 @@ p {
   margin: 10px;
   font-size: 20px;
 }
-#home {
-  margin-top: 100px;
+
+
+.prntcl {
+  padding: 100px 0 0 0;
+  margin: 0 !important;
 }
