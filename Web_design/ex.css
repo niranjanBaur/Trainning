@@ -1,26 +1,29 @@
 body {
-    background-color: rgb(88, 161, 230);
+  background-color: rgb(88, 161, 230);
 }
 
-.surface{
-    background-color: rgb(235, 203, 162);
-    margin: auto;
-    border-radius: 20px;
-    width: 75%;
-    height: 40vh;
-    padding: 25px;
-    flex-direction: column;
+.surface {
+  background-color: rgb(235, 203, 162);
+  margin: auto;
+  border-radius: 20px;
+  width: 75%;
+  height: 40vh;
+  padding: 25px;
+  flex-direction: column;
 }
-button{
-    font-size: 20px;
-    height: 50px;
-    width: 150px;
-    border-radius: 10px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items:center ;
+button {
+  font-size: 20px;
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-i{
-    margin-left: 10px;
+i {
+  margin-left: 10px;
+}
+.material-icons.md-48 {
+  font-size: 30px;
 }
