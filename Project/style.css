@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar-brand{
+    font-family: 'Dancing Script', cursive;
+}
+#brand-name{
+    color: crimson;
+}
+.nav-item{
+    padding-left: 60px;
+}
+span{
+    color: crimson;
+}
+
+.main{
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(assets/bg-img.jpg),no-repeat,fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+.main h1{
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+.btn1{
+    height: 55px;
+    width: 140px;
+    color: white;
+    outline: none;
+    border: none;
+    background: linear-gradient(90deg,green 0% , red 100%);
+}
+.btn1:hover{
+    background: linear-gradient(90deg,red 0% , green 100%);
+    transition: 0.1s all;
+}
+
+.items {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.items img{
+    margin-bottom: 15px;
+}
+
+.test{
+    display: flex;
+}
+.hello{
+    align-items: center;
+}
+#healthy{
+    background-color: rgb(212, 209, 212);
+    padding-top: 100px;
+}
+
+#getStarted{
+    border-radius: 20px;
+}
