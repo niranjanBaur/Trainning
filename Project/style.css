@@ -47,6 +47,7 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 10px;
 }
 
 .items img {
@@ -66,9 +67,12 @@ span {
 }
 
 #getStarted {
+  background-color: crimson;
   border-radius: 20px;
+  border: none;
 }
 #smCard {
+  padding: 5px;
   margin-top: 20px;
   height: 150px;
   width: 150px;
@@ -85,13 +89,6 @@ span {
   padding-left: 8px;
 }
 
-element.style {
-}
-#icon {
-  margin: auto;
-  height: 40px;
-  width: 40px;
-}
 img,
 svg {
   vertical-align: middle;
@@ -127,4 +124,25 @@ svg {
     justify-content: space-evenly;
     width: auto;
     height: auto;
+}
+
+#adm{
+  height: auto;
+  width: 100%;
+  padding-top: 10px;
+  background-color: rgb(9, 16, 39);
+}
+
+#ownerTalk{
+  height: auto;
+  width: 100%;
+  background-color: rgb(9, 16, 39);
+}
+
+#ownerTalk h1{
+ 
+}
+#exp-img{
+  height: 200px;
+  width: 200px;
 }
