@@ -28,6 +28,9 @@ span {
   font-size: 5rem;
   font-weight: 800;
 }
+#home{
+  height: auto;
+}
 
 .btn1 {
   height: 55px;
@@ -156,6 +159,7 @@ svg {
 .card:hover{
   background-color:rgb(36, 42, 80);
   color: white;
+  
 }
 #contact{
   background-color: rgb(212, 209, 212);
@@ -174,6 +178,10 @@ svg {
 }
 
 .blog span{
+  cursor: pointer;
+}
+
+.card #cardPara{
   cursor: pointer;
 }
 
