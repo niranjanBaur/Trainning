@@ -116,33 +116,71 @@ svg {
 .card {
   margin-bottom: 20px;
 }
-#gal{
-    display: flex;
+#gal {
+  display: flex;
 }
 #gal-img {
-    display: flex;
-    justify-content: space-evenly;
-    width: auto;
-    height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  width: auto;
+  height: auto;
 }
 
-#adm{
+#adm {
   height: auto;
   width: 100%;
   padding-top: 10px;
   background-color: rgb(9, 16, 39);
 }
 
-#ownerTalk{
+#ownerTalk {
   height: auto;
   width: 100%;
   background-color: rgb(9, 16, 39);
 }
-
-#ownerTalk h1{
- 
+#hr {
+  background-color: crimson;
+  width: 25%;
+  height: 5px;
 }
-#exp-img{
+#ownerTalk h1 {
+}
+#exp-img {
   height: 200px;
   width: 200px;
+}
+.cont{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.card:hover{
+  background-color:rgb(36, 42, 80);
+  color: white;
+}
+#contact{
+  background-color: rgb(212, 209, 212);
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+#blog-img{
+  max-width: 500px;
+  max-height: 250px;
+  background-size:auto;
+}
+.blog h5{
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.blog span{
+  cursor: pointer;
+}
+
+/* p{
+  text-align: center;
+} */
+
+section{
+  overflow: hidden;
 }
