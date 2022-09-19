@@ -25,7 +25,7 @@ span {
 }
 
 .main h1 {
-  font-size: 5rem;
+  font-size: 10vh;
   font-weight: 800;
 }
 #home{
@@ -33,11 +33,12 @@ span {
 }
 
 .btn1 {
-  height: 55px;
-  width: 140px;
+  height: 5.5vh;
+  width: 14vh;
   color: white;
   outline: none;
   border: none;
+  margin-bottom: 50px;
   background: linear-gradient(90deg, green 0%, red 100%);
 }
 .btn1:hover {
@@ -73,6 +74,7 @@ span {
   background-color: crimson;
   border-radius: 20px;
   border: none;
+  margin-bottom: 20px;
 }
 #smCard {
   padding: 5px;
@@ -185,10 +187,10 @@ svg {
   cursor: pointer;
 }
 
-/* p{
-  text-align: center;
-} */
-
 section{
   overflow: hidden;
+}
+
+#map{
+  margin: 10px;
 }
