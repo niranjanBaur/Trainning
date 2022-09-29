@@ -56,27 +56,27 @@
 // ===================================================
 // ===================================================
 
-// const data = {
-//   firstName: 'John',
-//   lastName: 'Doe',
-//   email: 'doe@gmail.com'
-// }
-// const output = Object.entries(data).map(([key, value]) => [value, key]);
-
-// console.log(output);
-
-// ====================================================
-// ====================================================
-// ====================================================
-
-var obj = {num:2}
-
-var add = function(a,b,c){
-    return this.num + a + b + c
+const data = {
+  firstName: 'John',
+  lastName: 'Doe',
+  email: 'doe@gmail.com'
 }
+const output = Object.entries(data).map(([key, value]) => [value, key]);
 
-// console.log(add.call(obj,1,2,3)) // call takes parameter one by one
+console.log(output);
+
+// ====================================================
+// ====================================================
+// ====================================================
+
+// var obj = {num:2}
+
+// var add = function(a,b,c){
+//     return this.num + a + b + c
+// }
+
+// // console.log(add.call(obj,1,2,3)) // call takes parameter one by one
 
 
-var arr = [1,2,3]
-console.log(add.apply(obj,arr)) // but apply takes two  arguments (object,array)
+// var arr = [1,2,3]
+// console.log(add.apply(obj,arr)) // but apply takes two  arguments (object,array)
