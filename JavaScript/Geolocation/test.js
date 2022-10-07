@@ -1,10 +1,20 @@
+var a
 
 function g(){
-    let a;
+    // let a;
     if(true){
         a = 5
+        console.log("g");
     }
-
-console.log(a)
 }
-g()
+
+function h(){
+    g()
+    console.log(a);
+    console.log("h");
+}
+
+h()
+
+// g()
+// console.log(a)
