@@ -1,12 +1,12 @@
 class Shape {
     color = "red"
     
-     getcolor() {
+    getcolor() {
         console.log(`Now the color is ${this.color}`);
         return this;
     }
 
-     setcolor(newColor){
+    setcolor(newColor){
         this.color = newColor
         console.log(`Color name changed to ${this.color}`)
         return this;
@@ -30,6 +30,8 @@ class Rectangle extends Shape {
     }
 }
 
+
+
 const rec = new Rectangle()
 
 rec.getColor;  // getter
@@ -43,3 +45,4 @@ rec.getColor;  // getter
 rec.getcolor().setcolor("red").getcolor(); // get and set is not work in method chaining
 
 Rectangle.area(10,5) // call static method using class name
+
