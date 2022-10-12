@@ -32,7 +32,7 @@ class Rectangle extends Shape {
 
 
 
-const rec = new Rectangle()
+const rec = new Rectangle();
 
 rec.getColor;  // getter
 rec.setColor = "blue" // setter
