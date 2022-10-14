@@ -60,20 +60,19 @@ function initMap() {
       addMarker(event.latLng);
    });
 
-    var marker; 
+   var  marker = new google.maps.Marker({
+    position:{lat:  22.5418249, lng: 88.3491414},
+    map:map,
+    title:"Your Location",
+    animation:google.maps.Animation.DROP
+});
     function addMarker(coords){
-      
-      if (marker == null)
-      {
-            marker = new google.maps.Marker({
-               position: location,
-               map: map
-            }); 
-      } 
-      else 
-      {
-          marker.setPosition(coords); 
-      } 
+ 
+      if(marker!=null)
+        {
+            marker.setPosition(coords),
+            marker.setTitle("You are in your new location")
+        }
 
     }
   }

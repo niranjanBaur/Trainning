@@ -20,7 +20,7 @@
 // console.log(a)
 
 
-
+let temp
 const person = {
     name : "ABC",
     Age : 10,
@@ -30,4 +30,11 @@ const person = {
         age = 20
     }
 }
+if(true){
+    temp = person
+}
+
+
+
+console.log(temp.name);
 
