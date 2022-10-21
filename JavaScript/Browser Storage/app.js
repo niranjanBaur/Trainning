@@ -28,6 +28,7 @@ function showContainer(){
   }
 
 }
+
 function hideContainer(){
   cont.style.display = "none";
 }
@@ -35,6 +36,7 @@ function hideContainer(){
 function showMsg(){
   msg.style.display = "flex"
 }
+
 function hideMsg(){
   if(!isUserLoggedIn){
     msg.style.display = "none"
@@ -80,7 +82,6 @@ if (isUserLoggedIn()) {
   showContainer()
   hideMsg()
 }
-
 
 //Now Start SendBtn
 b.addEventListener('click', () => {
