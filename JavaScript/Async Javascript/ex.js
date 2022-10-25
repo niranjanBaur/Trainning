@@ -21,9 +21,9 @@ const colors = {
 	flying: '#F5F5F5',
 	fighting: '#E6E0D4',
 	normal: '#F5F5F5',
-    ghost : '#6d75bd',
-    ice : '#6d75bd',
-    pshychic : '#ea95f5'
+  ghost : '#6d75bd',
+  ice : '#6d75bd',
+  pshychic : '#ea95f5'
 };
 
 const main_types = Object.keys(colors)
