@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Your Note</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="ex.css">
+</head>
+<body>
+    <div id="container" class="container">
+        <div class="addNote" id="addNote">
+            <span class="material-icons icon">add</span>
+            <p class="addNoteTxt">Add Note</p>
+        </div>
+    </div>
+
+    <div id="createNoteContainer" class="createNoteContainer" style="display: none;">
+        <div class="createNote">
+            <p class="addNoteTxt">Create Note</p>
+            <!-- <form action=""> -->
+                <!-- <label>Title</label> -->
+                <input id = "titleInp" type="text" placeholder="Title">
+                <textarea id = "msgInp" type="text" placeholder="Description"></textarea>
+                <div class="temp">
+                    <input id = "cancleBtn" type="button" value="Cancle">
+                    <input id = "saveBtn" type="button" value="Save Note">
+                </div>
+                
+            <!-- </form> -->
+        </div>
+    </div>
+
+    <script src="ex.js"></script>
+</body>
+</html>

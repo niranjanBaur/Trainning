@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    box-sizing: border-box
+}
+ 
+body{
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    margin: 20px;
+    /* font-family: "Loto"; */
+    background-color: rgb(165, 203, 235);
+}
+.addNote{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    width: 245px;
+    height: 170px;
+    background-color: white;
+}
+
+.icon{
+    font-size: 40px;
+    padding: 5px;
+    border: 2px solid rgba(72, 175, 149, 0.89);
+    border-radius: 50%;
+}
+.addNoteTxt{
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;    
+}
+
+.createNoteContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+
+}
+
+.createNote{
+    width: 500px;
+    height: auto;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.createNote h2{
+    font-family: 'Poppins', sans-serif; 
+    margin-top: 20px;
+}
+
+.createNote #titleInp{
+    width: 80%;
+    height: 40px;
+    padding-left: 10px;
+    margin-top: 20px;
+
+}
+.createNote #msgInp{
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    margin: 20px;
+}
+.temp{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.createNote #cancleBtn{
+    width: 35%;
+    height: 40px;
+    margin-right: 10px;
+    margin-bottom : 20px;
+    background-color: rgb(233, 73, 73);
+    border: none;
+}
+.createNote #saveBtn{
+    width: 35%;
+    height: 40px;
+    margin-left : 10px;
+    margin-bottom : 20px;
+    background-color: rgb(63, 219, 63);
+    border: none;
+
+}
+/* .container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+    justify-content: space-around|;
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+    /* grid: wrap; 
+    margin: 0 auto;
+    width: 100%; 
+} */
+.container
+{
+    display: flex;
+    /* grid-template-columns: repeat(auto-fill,249px); */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+
+.note {
+    background-color: white;
+    border-radius: 8px;
+    width: 245px;
+    max-height: auto;
+    padding: 8px;
+    flex-direction: column;
+    word-break: break-all;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&family=Raleway:wght@500;600&display=swap');
+span{
+    color: crimson;
+}
+#icons{
+    color: black;
+    font-size: 30px;
+}
+.progress{
+    margin-bottom: 20px;
+}
+.contact{
+    margin: auto;
+}
+.about{
+    padding-top: 50px;
+}
+#card , #contact{
+    padding-bottom: 100px;
+}

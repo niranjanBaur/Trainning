@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Local Storage</title>
+  </head>
+  <body>
+    <div id="container"  class="container" >
+      <div class="item">
+        <form>
+          <label>Email</label>
+          <input id="email" type="text" placeholder="email" />
+
+          <label>Username</label>
+          <input id="username" type="text" placeholder="username" />
+
+
+          <label>Password</label>
+          <input id="password" type="text" placeholder="password" />
+
+          <input id="submit_btn" type="button" value="Submit">
+        </form>
+      </div>
+    </div>
+    
+    <div id="msg" style="display: none;">
+      <h1>You are Already logged in , so you can log out</h1><br>
+      &nbsp;&nbsp;
+      <button id="logout">Log out</button>
+    </div>
+
+
+    <!-- <h1 id="msg" style="visibility: hidden";></h1>You are Already logged in , so you can log out</h1> -->
+
+    <script src="app.js"></script>
+  </body>
+</html>

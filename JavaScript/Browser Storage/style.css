@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    width: 400px;
+    height: 400px;
+    border: 2px solid red;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 0px 0px 30px rgb(14, 58, 4);
+    align-items: center;
+}
+.item{
+    margin: auto;
+}
+#email{
+    display: block;
+    margin-bottom: 30px;
+}
+#username{
+    display: block;
+    margin-bottom: 30px;
+}
+#password{
+    display: block;
+    margin-bottom: 20px;
+}
+input{
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 20px;
+    border: 2px solid red;
+    padding-left: 10px;
+}
+#logout{
+    height: 50px;
+    width: 100px;
+}

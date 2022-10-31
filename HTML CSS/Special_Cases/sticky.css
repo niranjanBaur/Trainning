@@ -1,0 +1,40 @@
+* {
+  margin: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+.main div{
+  margin-top: 100px;
+}
+.stnav{
+  position: sticky;
+  top: 0;
+  z-index:  99;
+}
+nav {
+  background-color: salmon;
+
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+}
+#nav h1 {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+#nav h1:hover {
+  color: springgreen;
+}
+p {
+  margin: 10px;
+  font-size: 20px;
+}
+
+
+.prntcl {
+  padding: 100px 0 0 0;
+  margin: 0 !important;
+}

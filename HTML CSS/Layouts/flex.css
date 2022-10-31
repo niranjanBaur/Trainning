@@ -1,0 +1,81 @@
+h1{
+    text-align: center;
+}
+.floatBox1{
+    width: 500px;
+    height: 700px;
+    background-color: aquamarine;
+    margin: auto;
+    border: 2px solid red;
+    margin-bottom: 10px;
+}
+
+.floatBox2{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-top: 280px;
+    float: none;
+    background-color: greenyellow;
+    border: 2px solid red;
+}
+
+
+.flexBox1{
+    width: 500px;
+    height: 700px;
+    background-color: aquamarine;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    margin-bottom: 10px;
+}
+
+.flexBox2{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: greenyellow;
+    border: 2px solid red;
+}
+
+.gridBox1{
+    height: 700px;
+    width: 500px;
+    background-color: grey;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    border: 2px solid red;
+    margin-bottom: 10px;
+}
+.gridBox2{
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    border: 2px solid red;
+}
+
+.box1{
+    height: 700px;
+    width: 500px;
+    background-color: grey;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    border: 2px solid red;
+    margin-bottom: 10px;
+}
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    border: 2px solid red;
+}
+

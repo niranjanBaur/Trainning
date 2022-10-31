@@ -1,0 +1,27 @@
+#box{
+    
+    height: 500px;
+    width: 500px;
+    padding: 20px;
+    background-color: rgb(175, 209, 209);
+    border: 1px solid red;
+}
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    font-size: 20px;
+}
+button{
+    font-size: 20px;
+}
+/*
+.paracls {
+   text-decoration: line-through; 
+}
+.paracls2 {
+   text-decoration: none; 
+} */
+

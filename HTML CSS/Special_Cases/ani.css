@@ -1,0 +1,28 @@
+#cont{
+    background-color: salmon;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    padding: 10px;
+}
+
+#box{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+
+    animation-name: move;
+    animation-duration: 5s;
+    position: relative;
+    animation-delay: 1s;
+    animation-iteration-count: 5;
+    transition-timing-function: ease-out;
+}
+
+@keyframes move{
+    0%{left: 0px;top: 0px;}
+    25%{top: 400px;left: 0px;}
+    50%{top: 400px;left: 400px;}
+    75%{top:0px;left: 400px;}
+    100%{left: 0px;top: 0px;}
+}

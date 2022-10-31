@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.navbar-brand {
+  font-family: "Dancing Script", cursive;
+}
+#brand-name {
+  color: crimson;
+}
+.nav-item {
+  padding-left: 60px;
+}
+span {
+  color: crimson;
+}
+
+.main {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(assets/bg-img.jpg), no-repeat, fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+.main h1 {
+  font-size: 10vh;
+  font-weight: 800;
+}
+#home{
+  height: auto;
+}
+
+.btn1 {
+  height: 5.5vh;
+  width: 14vh;
+  color: white;
+  outline: none;
+  border: none;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, green 0%, red 100%);
+}
+.btn1:hover {
+  background: linear-gradient(90deg, red 0%, green 100%);
+  transition: 0.1s all;
+}
+
+.items {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.items img {
+  margin-bottom: 15px;
+}
+
+.test {
+  display: flex;
+}
+.hello {
+  align-items: center;
+}
+#healthy {
+  background-color: rgb(212, 209, 212);
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+#getStarted {
+  background-color: crimson;
+  border-radius: 20px;
+  border: none;
+  margin-bottom: 20px;
+}
+#smCard {
+  padding: 5px;
+  margin-top: 20px;
+  height: 150px;
+  width: 150px;
+  background-color: white;
+}
+#icon {
+  margin: auto;
+  height: 40px;
+  width: 40px;
+}
+.col-9 {
+  flex: 0 0 auto;
+  width: 75%;
+  padding-left: 8px;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) * -0.5);
+  margin-left: calc(var(--bs-gutter-x) * -0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+#gal {
+  display: flex;
+}
+#gal-img {
+  display: flex;
+  justify-content: space-evenly;
+  width: auto;
+  height: auto;
+}
+
+#adm {
+  height: auto;
+  width: 100%;
+  padding-top: 10px;
+  background-color: rgb(9, 16, 39);
+}
+
+#ownerTalk {
+  height: auto;
+  width: 100%;
+  background-color: rgb(9, 16, 39);
+}
+#hr {
+  background-color: crimson;
+  width: 25%;
+  height: 5px;
+}
+#ownerTalk h1 {
+}
+#exp-img {
+  height: 200px;
+  width: 200px;
+}
+.cont{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.card:hover{
+  background-color:rgb(36, 42, 80);
+  color: white;
+  
+}
+#contact{
+  background-color: rgb(212, 209, 212);
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+#blog-img{
+  max-width: 500px;
+  max-height: 250px;
+  background-size:auto;
+}
+.blog h5{
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.blog span{
+  cursor: pointer;
+}
+
+.card #cardPara{
+  cursor: pointer;
+}
+
+section{
+  overflow: hidden;
+}
