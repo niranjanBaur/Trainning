@@ -57,7 +57,7 @@ export default function TextFeild() {
         ></textarea>
         <button className="btn btn-primary mt-4" onClick={onClickUpHandler}>TO UPPERCASE</button>
         <button className="btn btn-warning ms-2 mt-4" onClick={onClickLoHandler}>to lowerCase</button>
-        <button className="btn btn-primary ms-2 mt-4" onClick={onCLickCapHandler}>To Capitalize Each Word</button>
+        {/* <button className="btn btn-primary ms-2 mt-4" onClick={onCLickCapHandler}>To Capitalize Each Word</button> */}
         </div>
     );
     }
