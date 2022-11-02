@@ -1,0 +1,8 @@
+.todo{
+    display: flex;
+    align-items: center;
+    background-color: beige;
+
+    padding-left: 10px;
+    height: 30px;
+}
