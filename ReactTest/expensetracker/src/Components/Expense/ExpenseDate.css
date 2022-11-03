@@ -1,0 +1,30 @@
+.expence-date{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 80px;
+    width: 80px;
+
+    background-color: rgba(0, 0, 0, 0.438);
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.expence-date .expence-date__month{
+    font-size: 15px;
+    color: wheat;
+    font-weight: 600;
+    line-height: 20px;
+}
+.expence-date .expence-date__year{
+    font-size: 15px;
+    color: wheat;
+    font-weight: 800;
+}
+.expence-date .expence-date__day{
+    font-size: 25px;
+    color: wheat;
+    font-weight: 900;
+}
