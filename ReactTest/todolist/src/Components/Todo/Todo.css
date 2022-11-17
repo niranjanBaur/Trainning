@@ -1,0 +1,79 @@
+h1{
+    color: aqua;
+}
+
+h4{
+    color: aqua;
+}
+
+.child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure{
+    display: flex;
+    align-items: center;
+}
+
+figure img{
+    width: 50px;
+}
+
+input{
+    border: 0;
+    height:40px;
+    font-size: 18px;
+    padding-left: 10px;
+}
+.addItems{
+    display: flex;
+    justify-content: center;
+}
+
+.addItems button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: rgb(116, 252, 127);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.addItems button:hover{
+    background-color: rgb(29, 238, 109);
+}
+
+.eachItems h3{
+    display: inline;
+    padding: 0 10px;
+}
+
+.eachItems{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aqua;
+    width: 400px;
+    height: 40px;
+    margin-top: 10px;
+}
+.eachItems button{
+    background-color: rgb(250, 96, 96);
+    height: 40px;
+    width: 40px;
+    border: none;
+    font-size: 20px;
+}
+
+.delAll button{
+    border: none;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.delAll button:hover{
+    background-color: rgb(250, 96, 96);
+    color: white;
+}
