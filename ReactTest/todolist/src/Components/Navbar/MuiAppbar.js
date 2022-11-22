@@ -22,11 +22,11 @@ export default class MuiAppbar extends Component {
             <Typography variant="h6" sx={{marginLeft:'10px'}}>Photo Album</Typography>
 
             {/* text color not working */}
-            <Tabs textColor="#fff" sx={{margin:'auto'}}>
-              <Tab label="Home" />
-              <Tab label="Services" />
-              <Tab label="Contact Us" />
-              <Tab label="Abuout Us" />
+            <Tabs value={1} sx={{margin:'auto'}}>
+              <Tab label="Home" value={1}/>
+              <Tab label="Services" value={2}/>
+              <Tab label="Contact Us" value={3}/>
+              <Tab label="Abuout Us" value={4}/>
             </Tabs>
 
             <MuiButtons title = "Login"/>

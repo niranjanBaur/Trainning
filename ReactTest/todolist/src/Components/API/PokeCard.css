@@ -1,0 +1,16 @@
+.cardCont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card{
+    margin: 10px;
+    padding: 10px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #17164a;
+    color: white;
+}

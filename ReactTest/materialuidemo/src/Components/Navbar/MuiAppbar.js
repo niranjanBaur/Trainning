@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import { PhotoCamera } from "@mui/icons-material";
 import React, { Component } from "react";
-import MuiButtons from "./MuiButtons";
+import MuiButtons from "../Button/MuiButtons";
 // import MuiButtons from "./MuiButtons";
 
 export default class MuiAppbar extends Component {

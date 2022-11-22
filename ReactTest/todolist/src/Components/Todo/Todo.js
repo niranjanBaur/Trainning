@@ -1,7 +1,8 @@
-import { Typography } from "@mui/material";
 import React, { useState } from "react";
 import "./Todo.css";
+
 export default function Todo() {
+  
   const [input, setInput] = useState("");
 
   const [item, setItem] = useState([]);
@@ -51,12 +52,11 @@ export default function Todo() {
           <div className="showItems">
             {item.map((ele, ind) => {
                 return(
-                    <div className="eachItems" key={ind}>
-                        <h3>{ele}</h3>
-                        <button onClick={() => deleteItem(ind)}>X</button>
-                    </div>
+                  <div className="eachItems" key={ind}>
+                    <h3>{ele}</h3>
+                    <button onClick={() => deleteItem(ind)}>X</button>
+                  </div>
                 )
-              
             })}
           </div>
 
