@@ -1,7 +1,9 @@
 import React, { createContext, useEffect, useState } from "react";
 import { MainBodySty } from "../Styled/MainBodySty";
 import UseFetch from "../API/UseFetch";
+import RightDetail from "../RightDetail/RightDetail";
 
+export const Context = createContext()
 
 export default function MainBody() {
   let daysList = [
@@ -42,16 +44,17 @@ export default function MainBody() {
   // const [city,setCity] = useState(null)
   const [search, setSearch] = useState("Kolkata");
 
-  const context = createContext()
-
   const { data, loading, err } = UseFetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=8ac94042192b7f6c370bd5ad6e97b7f5`
   );
   // if (loading) return <h1>Loading ...</h1>;
   // if (err) console.log(err);
 
+  console.log(data?.data);
+
   return (
     <>
+      <Context.Provider value={data}>
       <MainBodySty>
         <div className="mainContainer">
           <div className="mainTop">
@@ -65,7 +68,7 @@ export default function MainBody() {
             </div>
             <div className="search">
               <input
-                type="search"
+                type="text"
                 id="search"
                 placeholder="Search Location Here"
                 value={search}
@@ -82,7 +85,7 @@ export default function MainBody() {
             </div>
           </div>
 
-          {!data?.data ? (
+          {!data ? (
             <p>No Data Found or incorrect city searched</p>
           ) : (
             <div className="overView">
@@ -132,20 +135,13 @@ export default function MainBody() {
                     <h2>{data?.data?.clouds?.all} %</h2>
                   </div>
                 </div>
-                <div className="rainChance">
-                  <div id="rainIcn">
-                    <i class="fa-solid fa-cloud-rain"></i>
-                  </div>
-                  <div id="windDetails">
-                    <h5>Rain Chance</h5>
-                    <h2>{data?.data?.main?.temp} %</h2>
-                  </div>
-                </div>
               </div>
             </div>
           )}
         </div>
       </MainBodySty>
+      <RightDetail></RightDetail>
+      </Context.Provider>
     </>
   );
 }

@@ -12,7 +12,7 @@ const UseFetch = (url) => {
       .get(url)
       .then((res) => {
         setData(res);
-        console.log(res,"UseFetch");
+        // console.log(res,"UseFetch");
       })
       .catch((err) => {
         setErr(err);

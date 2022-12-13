@@ -40,7 +40,7 @@ export const MainBodySty = styled.main`
     }
 
     #notify , #profile{
-        margin-left: 20px;
+        margin-left: 40px;
         font-size: 20px;
     }
     .overViewTop{

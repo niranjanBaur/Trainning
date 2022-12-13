@@ -1,38 +1,49 @@
 import React from "react";
 import { RightDetailSty } from "../Styled/RightDetailSty";
-import UseFetch from "../API/UseFetch";
-import { context } from "../MainBody/MainBody";
+import { Context } from "../MainBody/MainBody";
 
 export default function RightDetail() {
   var currentTime = new Date();
-  var time = currentTime.getHours() + ":" + currentTime.getMinutes();
+  // var time = currentTime.getHours() + ":" + currentTime.getMinutes();
 
-  var fullTime = currentTime.getHours() + ":" + currentTime.getMinutes() + ":" + currentTime.getSeconds();
+  // var fullTime =
+  //   currentTime.getHours() +
+  //   ":" +
+  //   currentTime.getMinutes() +
+  //   ":" +
+  //   currentTime.getSeconds();
 
   return (
     <>
-      <RightDetailSty>
-        <>
-          <div className="rightCont">
-            <div className="rightTop">
-              <div className="cityName">
-                <h3>Kolkata</h3>
-                <h6>IN</h6>
-              </div>
-              <div className="time">
-                <h3>{time}</h3>
-              </div>
-            </div>
-            <div className="rightTemp">
-              <div></div>
-              <div className="temp">
-                <h3>20 &deg C</h3>
-                <h6>Dramatic Cloudy</h6>
-              </div>
-            </div>
-          </div>
-        </>
-      </RightDetailSty>
+      <Context.Consumer>
+        {(data) => {
+          // console.log(data)
+          return (
+            <RightDetailSty>
+              <>
+                <div className="rightCont">
+                  <div className="rightTop">
+                    <div className="cityName">
+                      <h3>{data?.data?.name}</h3>
+                      <h6>{data?.data?.sys.country}</h6>
+                    </div>
+                    <div className="time">
+                      <h3>{currentTime.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}</h3>
+                    </div>
+                  </div>
+                  <div className="rightTemp">
+                    <div id="tempIcn"><i class="fa-solid fa-cloud-sun"></i></div>
+                    <div className="temp">
+                      <h3>{data?.data?.main.temp}° C</h3>
+                      <h6>{data?.data?.weather[0].main}</h6>
+                    </div>
+                  </div>
+                </div>
+              </>
+            </RightDetailSty>
+          );
+        }}
+      </Context.Consumer>
     </>
   );
 }
