@@ -1,0 +1,70 @@
+#caption{
+    font-size: 30px;
+    margin: 20px;
+}
+.mainCont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.addItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input{
+    width: 500px;
+    height: 50px;
+    /* margin-right: 10px; */
+    border: 2px solid black;
+    border-radius: 20px 0 0 20px;  
+    font-size: 20px;
+    padding-left: 20px;                                                                   
+}
+.addIcn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 52px;
+    width: 51px;
+    background-color: rgb(151, 218, 151);
+    border: 2px solid black;
+    border-left: 0px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+#icn , #delIcn{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.showItems{
+    width: 40%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.eachItem{
+    background-color: rgb(141, 228, 213);
+    display: flex;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: space-between;
+    width: 90%;
+    margin: 10px 0;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+#remAllBtn{
+    background-color: rgb(245, 114, 114);
+    border: 1px solid black;
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+}

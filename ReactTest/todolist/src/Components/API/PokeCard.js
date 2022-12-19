@@ -29,6 +29,3 @@ export default function PokeCard() {
     </>
   );
 }
-
-
-~

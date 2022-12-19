@@ -31,6 +31,7 @@ export const SideNavSty = styled.span`
         list-style: none;
         margin-top: 40px;
         font-weight: 500;
+        cursor: pointer;
     }
     .accounts li{
         list-style: none;

@@ -50,7 +50,7 @@ export default function MainBody() {
   // if (loading) return <h1>Loading ...</h1>;
   // if (err) console.log(err);
 
-  console.log(data?.data);
+  // console.log(data?.data);
 
   return (
     <>
@@ -68,14 +68,15 @@ export default function MainBody() {
             </div>
             <div className="search">
               <input
-                type="text"
+                type="search"
                 id="search"
                 placeholder="Search Location Here"
                 value={search}
                 onChange={(event) => {
                   setSearch(event.target.value);
-                  event.defaultPrevented();
+                  // event.defaultPrevented();
                 }}
+                autoComplete="off"
               />
               <i class="fa-solid fa-magnifying-glass"></i>
             </div>

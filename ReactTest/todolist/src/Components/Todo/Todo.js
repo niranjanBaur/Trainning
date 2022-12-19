@@ -7,6 +7,7 @@ export default function Todo() {
 
   const [item, setItem] = useState([]);
 
+
   const addItem = () => {
     if (!input) {
     } else {
@@ -54,6 +55,7 @@ export default function Todo() {
                 return(
                   <div className="eachItems" key={ind}>
                     <h3>{ele}</h3>
+                    <button onClick={() => deleteItem(ind)}>X</button>
                     <button onClick={() => deleteItem(ind)}>X</button>
                   </div>
                 )

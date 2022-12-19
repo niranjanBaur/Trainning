@@ -7,8 +7,8 @@ import SideNav from './Components/SideNav/SideNav';
 function App() {
   return (
     <div className="App">
-      <MainBody></MainBody>
       <SideNav></SideNav>
+      <MainBody></MainBody>
     </div>
   );
 }
