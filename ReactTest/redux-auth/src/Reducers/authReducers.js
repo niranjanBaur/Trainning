@@ -5,6 +5,12 @@ const authReducer = (state = { user: [] }, action) => {
         ...state,
         user: action.user,
       };
+
+    case "LOG_IN" : 
+      return {
+        ...state,
+        user: action.user
+      }  
     default:
       return state;
   }

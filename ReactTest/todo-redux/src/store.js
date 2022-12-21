@@ -12,5 +12,5 @@ const middlewareEnhancer = composeWithDevTools(
 
 const store = createStore(rootReducer,middlewareEnhancer)
 // const store = configureStore(rootReducer)
-
+    
 export default store;

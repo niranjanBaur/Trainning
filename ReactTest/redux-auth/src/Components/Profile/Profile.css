@@ -1,0 +1,15 @@
+#lgbtn {
+  background-color: rgba(235, 159, 149, 0.705);
+  width: 100px;
+  height: 45px;
+  padding-bottom: 2px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 5px;
+  border: 1.5px solid black;
+}
+
+#lgbtn:hover {
+  background-color: rgb(177, 36, 11);
+  cursor: pointer;
+}

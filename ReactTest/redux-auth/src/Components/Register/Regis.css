@@ -49,7 +49,9 @@ input {
     border: 1.5px solid black;
 
 }
-
+#logInTxt:hover{
+    cursor: pointer;
+}
 
 input::placeholder {
     color: rgb(43, 118, 184);
