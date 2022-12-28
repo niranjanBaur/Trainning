@@ -1,6 +1,7 @@
 import React from "react";
 import { RightDetailSty } from "../Styled/RightDetailSty";
 import { Context } from "../MainBody/MainBody";
+import EachDayData from "../PrevSevenDayData/EachDayData";
 
 export default function RightDetail() {
   var currentTime = new Date();
@@ -38,6 +39,8 @@ export default function RightDetail() {
                       <h6>{data?.data?.weather[0].main}</h6>
                     </div>
                   </div>
+
+                  <EachDayData></EachDayData>
                 </div>
               </>
             </RightDetailSty>

@@ -1,7 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import { SideNavSty } from "../Styled/SideNavSty";
-
 export default function SideNav() {
+
+  const navigate = useNavigate()
+
+
   return (
     <SideNavSty>
       <div className="navCont">
@@ -11,9 +15,15 @@ export default function SideNav() {
         </div>
         <div className="navLinks">
             <ul>
-                <li><span id="icon"><i class="fa-solid fa-house"></i></span> Dashboard</li>
-                <li><span id="icon"><i class="fa-solid fa-map"></i></span> Map</li>
-                <li><span id="icon"><i class="fa-solid fa-location-dot"></i></span> Saved Location</li>
+                <li id="dashboard" onClick={()=>{
+                  navigate("/")
+                }}><span id="icon"><i class="fa-solid fa-house"></i></span> Dashboard</li>
+                <li id="map" onClick={()=>{
+                  navigate("/map")
+                }}><span id="icon"><i class="fa-solid fa-map"></i></span> Map</li>
+                <li  onClick={()=>{
+                  navigate("/savelocation")
+                }}><span id="icon"><i class="fa-solid fa-location-dot"></i></span> Saved Location</li>
                 <li><span id="icon"><i class="fa-solid fa-calendar-days"></i></span> Calender</li>
             </ul>
         </div>

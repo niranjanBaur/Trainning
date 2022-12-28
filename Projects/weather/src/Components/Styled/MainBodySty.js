@@ -4,6 +4,10 @@ export const MainBodySty = styled.main`
     margin-left: 16%;
     max-width: 60%;
 
+    #redirect{
+        font-size: 13px;
+    }
+
     .mainContainer{
         margin: auto 30px;
     }
@@ -24,8 +28,8 @@ export const MainBodySty = styled.main`
         background-color: transparent;
     }
     input:focus{
-    outline: none;
-}
+        outline: none;
+    }
     .search{
         display: flex;
         align-items: center;
@@ -39,8 +43,18 @@ export const MainBodySty = styled.main`
         margin: 0 10px;
     }
 
+    #saveBtn{
+        width: 70px;
+        font-weight: 600;
+        padding: 10px;
+        background-color: #92f0a2;
+        border: 1.5px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
     #notify , #profile{
-        margin-left: 40px;
+        margin-left: 30px;
         font-size: 20px;
     }
     .overViewTop{

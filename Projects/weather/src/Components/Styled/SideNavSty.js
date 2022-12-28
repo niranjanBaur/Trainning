@@ -5,9 +5,6 @@ export const SideNavSty = styled.span`
         height: 100vh;
         width: 16%;
         background-color: #EEF2F3;
-        
-
-
         display: flex;
         flex-direction: column;
         justify-content: space-between;

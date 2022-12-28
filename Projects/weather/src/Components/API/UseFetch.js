@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 const UseFetch = (url) => {
@@ -21,6 +21,8 @@ const UseFetch = (url) => {
         setLoading(false);
       });
   }, [url]);
+
+  localStorage.setItem("weatherData",JSON.stringify(data))
 
   return { data, loading, err };
 };
