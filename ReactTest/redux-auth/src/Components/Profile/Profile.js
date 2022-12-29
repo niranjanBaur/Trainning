@@ -6,14 +6,14 @@ import "./Profile.css"
 export default function Profile() {
 
   const navigate = useNavigate()
-  let user = useSelector((state) => state?.authReducer?.user?.userData);
+  let userR = useSelector((state) => state?.authReducer?.user?.userData);
 
-  user = JSON.parse(user);
-  console.log(user);
+  userR = JSON.parse(userR);
+  console.log(userR);
 
   return (
     <>
-      <h2>Hi Welcome {user.name}</h2>
+      <h2>Hi, {userR.name}</h2>
       <button id="lgbtn" onClick={() => {
           navigate("/")
       }}>Logout</button>

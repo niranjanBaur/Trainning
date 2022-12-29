@@ -17,11 +17,11 @@ export default function Todo() {
   };
 
   const deleteItem = (id) => {
-        const updatedItem = item.filter((ele,ind)=>{
-            return (ind!==id)
-        })
+    const updatedItem = item.filter((ele,ind)=>{
+        return (ind!==id)
+    })
 
-        setItem(updatedItem)
+    setItem(updatedItem)
   }
 
   const delAll = () => {
