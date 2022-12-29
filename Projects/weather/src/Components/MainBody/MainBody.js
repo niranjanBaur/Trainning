@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from "react";
 import { MainBodySty } from "../Styled/MainBodySty";
 import UseFetch from "../API/UseFetch";
 import RightDetail from "../RightDetail/RightDetail";
-
+import Dailygraph from "../Chart/Dailygraph"
 import { useNavigate } from "react-router";
 
 export const Context = createContext();
@@ -104,8 +104,6 @@ export default function MainBody() {
 
       // console.log(existOrNot);
 
-      
-      
       if (!existOrNot) {
 
         localStorage.setItem(
@@ -229,6 +227,7 @@ export default function MainBody() {
             )}
           </div>
         </MainBodySty>
+        <Dailygraph></Dailygraph>
         <RightDetail></RightDetail>
       </Context.Provider>
     </>

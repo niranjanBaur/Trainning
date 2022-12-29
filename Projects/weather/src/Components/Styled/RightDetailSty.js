@@ -23,7 +23,7 @@ export const RightDetailSty = styled.aside`
         font-size: 20px;
         margin: 0;
 
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
 
     .rightCont{
@@ -52,6 +52,7 @@ export const RightDetailSty = styled.aside`
         font-family: 'Poppins', sans-serif;
         font-size: 20px;
         font-weight: 400px;
+        margin-bottom: 10px;
     }
 
     .temp h3 {
@@ -59,5 +60,7 @@ export const RightDetailSty = styled.aside`
         /* font-family: 'Poppins', sans-serif; */
         font-size: 30px;
         font-weight: 100px;
+        margin-bottom: 10px;
+
     }
 `

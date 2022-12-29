@@ -1,8 +1,10 @@
 .sevenDayCont{
     background-color: #EEF2F3;
-    border-radius: 10px;
+    border-radius: 0 10px;
     font-size: 20px;
     color:  black;
+    margin: 2px;
+    padding: 0;
 }
 
 .sevenDayCont h3 {
@@ -11,11 +13,14 @@
 }
 .dayDetails{
     display: flex;
-    gap:  20px;
+    gap:  10px;
 }
 .eachDay{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 8px;
+}
+#date{
+    font-size: 17px;
 }

@@ -7,12 +7,12 @@ import { v4 as uuid } from 'uuid';
 export default function SaveLocation() {
   let data = localStorage.getItem("details");
 
-  data = JSON.parse(data);
+  data = JSON.parse(data).sort();
 
   return (
-    <div id={uuid()} className="listCont">
+    <div key={uuid()} className="listCont">
       {data?.map((res) => {
-        return <EachList temp={res.temp}  city={res.cityName} country={res.countryName || "-"} time={res.dateAndTime}></EachList>;
+        return <EachList temp={res.temp}  city={res.cityName} country={res.countryName || "--"} time={res.dateAndTime}></EachList>;
       })}
     </div>
   );

@@ -1,76 +1,64 @@
-import React from 'react'
-import "./EachDayData.css"
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import UseFetch from "../API/UseFetch";
+import "./EachDayData.css";
 
 export default function EachDayData() {
+  const APP_ID = "32ba0bfed592484379e51106cef3f204";
+  const cnt = 7;
+
+  let weatherData = localStorage.getItem("weatherData");
+  weatherData = JSON.parse(weatherData);
+
+  let city = weatherData?.data?.name;
+
+  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=32ba0bfed592484379e51106cef3f204&units=metric`;
+
+  //   console.log(city);
+
+  const [data, setData] = useState(null);
+
+  const lat = weatherData?.data?.coord?.lat;
+  const lon = weatherData?.data?.coord?.lon;
+
+  useEffect(() => {
+    axios.get(url).then((res) => {
+      setData(res?.data);
+    });
+    localStorage.setItem("dailyData",JSON.stringify(data?.list))
+  }, [city]);
+
+  // console.log(data);
+
+  const dayList = [];
+
+  for (let i = 0; i < 9; i++) {
+    dayList.push(data?.list[i]);
+  }
+
+  // console.log(dayList);
+
   return (
     <>
-        <div className='sevenDayCont'>
-            <h3>Seven Day Data</h3>
+      {/* <div className="sevenDayCont"> */}
+      {/* <h3>Seven Day Data</h3> */}
 
-            <div className='eachDay'>
-                <div className='dayDetails'>
-                    <div id='icn'><i class="fa-solid fa-cloud-sun"></i></div>
-                    <div id='temp'>20° C</div>
+      {dayList.map((res) => {
+        return (
+          <div className="sevenDayCont">
+            <div className="eachDay"> 
+              <div className="dayDetails">
+                <div id="icn">
+                  <i class="fa-solid fa-cloud-sun"></i>
                 </div>
-                <div id='date'>
-                    <div>26/12/2022</div>
-                </div>
+                <div id="temp">{res?.main?.temp}°C</div>
+              </div>
+                <div id="date">{res?.dt_txt}</div>
             </div>
-            <div className='eachDay'>
-                <div className='dayDetails'>
-                    <div id='icn'><i class="fa-solid fa-cloud-sun"></i></div>
-                    <div id='temp'>22° C</div>
-                </div>
-                <div id='date'>
-                    <div>25/12/2022</div>
-                </div>
-            </div>
-            <div className='eachDay'>
-                <div className='dayDetails'>
-                    <div id='icn'><i class="fa-solid fa-cloud-sun"></i></div>
-                    <div id='temp'>21° C</div>
-                </div>
-                <div id='date'>
-                    <div>24/12/2022</div>
-                </div>
-            </div>
-            <div className='eachDay'>
-                <div className='dayDetails'>
-                    <div id='icn'><i class="fa-solid fa-cloud-sun"></i></div>
-                    <div id='temp'>23° C</div>
-                </div>
-                <div id='date'>
-                    <div>23/12/2022</div>
-                </div>
-            </div>
-            <div className='eachDay'>
-                <div className='dayDetails'>
-                    <div id='icn'><i class="fa-solid fa-cloud-sun"></i></div>
-                    <div id='temp'>20° C</div>
-                </div>
-                <div id='date'>
-                    <div>22/12/2022</div>
-                </div>
-            </div>
-            <div className='eachDay'>
-                <div className='dayDetails'>
-                    <div id='icn'><i class="fa-solid fa-cloud-sun"></i></div>
-                    <div id='temp'>21° C</div>
-                </div>
-                <div id='date'>
-                    <div>21/12/2022</div>
-                </div>
-            </div>
-            <div className='eachDay'>
-                <div className='dayDetails'>
-                    <div id='icn'><i class="fa-solid fa-cloud-sun"></i></div>
-                    <div id='temp'>22° C</div>
-                </div>
-                <div id='date'>
-                    <div>20/12/2022</div>
-                </div>
-            </div>
-        </div>
+          </div>
+        );
+      })}
+      {/* </div> */}
     </>
-  )
+  );
 }
