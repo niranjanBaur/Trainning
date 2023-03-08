@@ -1,0 +1,22 @@
+.LoginForm{
+    height: 90vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;;
+    justify-content: center;
+}
+
+.invalid{
+    /* width: 100%; */
+    background-color: rgb(236, 64, 64);
+    color: white;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.reg{
+    margin-top: 20px;
+}

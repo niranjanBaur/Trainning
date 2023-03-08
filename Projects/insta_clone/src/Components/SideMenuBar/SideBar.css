@@ -1,0 +1,71 @@
+.SideBar {
+  height: 100vh;
+  width: 250px;
+  background-color: rgb(0, 0, 0);
+  font-size: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left:10px ;
+
+  position: sticky;
+  top: 0;
+}
+
+.SideBarTop {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 30px;
+}
+
+.icon {
+  font-size: 70px;
+}
+
+.SideBarMid ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.link {
+  width: 90%;
+  padding: 10px;
+  text-decoration: none;
+}
+
+li{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: white;
+}
+
+.link:hover {
+  background-color: rgba(48, 46, 46, 0.712);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.SideBarBottom {
+  width: 90%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-left: 10px;
+}
+
+.SideBarBottom:hover{
+  background-color: rgba(48, 46, 46, 0.712);
+  border-radius: 50px;
+  cursor: pointer;
+}

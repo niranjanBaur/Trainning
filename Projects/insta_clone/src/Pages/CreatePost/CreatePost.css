@@ -1,0 +1,84 @@
+.CreatePost {
+  display: flex;
+  flex: 1;
+}
+.createPostCont {
+  display: flex;
+  flex: 5;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 70vh;
+  align-items: space-around;
+  justify-content: center;
+}
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.insertIcon {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  color: rgb(101, 104, 103);
+  cursor: pointer;
+}
+.left {
+  border-right: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.right {
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+}
+
+.right textarea {
+  width: 80%;
+  height: 10%;
+  min-height: 50%;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: rgb(255, 255, 255);
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.bottom{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.postBtn{
+  background-color: rgb(86, 184, 86);
+  margin-top: 30px;
+  border: none;
+  width: 100px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
