@@ -1,0 +1,115 @@
+.single {
+  display: flex;
+  width: 100%;
+
+  .SingleContainer {
+    flex: 6;
+
+    .top {
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+      position: relative;
+      align-items: center;
+
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      -moz-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+
+      margin: 20px;
+
+      .left {
+        flex: 1;
+
+        .title {
+          color: gray;
+        }
+
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          .itemImg {
+            width: 200px;
+            height: 200px;
+            margin-top: 20px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: rgb(66, 64, 64);
+          }
+        }
+      }
+
+      .right {
+        flex: 2;
+        display: flex;
+        align-items: center;
+
+        .details {
+          display: flex;
+          flex-direction: column;
+
+          .detailItem {
+            margin-top: 10px;
+          }
+        }
+
+        .contact {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          right: 20px;
+
+          .twitter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(115, 179, 209, 0.61);
+          }
+          .facebook {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(54, 111, 216, 0.61);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .whatsapp {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(122, 243, 106, 0.61);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .mail {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(241, 109, 92, 0.61);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+
+    .bottom {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      -moz-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      padding: 10px;
+      margin: 20px;
+
+      .title{
+        margin: 20px;
+        font-size: 16px;
+        color: gray;
+        font-weight: 600;
+      }
+    }
+  }
+}

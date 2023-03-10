@@ -1,0 +1,99 @@
+.sidebar {
+  flex: 1;
+  border-right: 0.3px solid rgb(228, 224, 224);
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+ 
+
+  .top {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #6439ff;
+    }
+
+  }
+
+  hr {
+    height: 0;
+    border: 0.3px solid rgb(228, 224, 224);
+  }
+
+  .center{
+    padding-left: 10px;
+
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style:  none;
+
+
+        .title{
+            font-size: 13px;
+            font-weight: bold;
+            color: #999;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        li{
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            cursor: pointer;
+
+            &:hover{
+                background-color: rgb(228, 220, 220);
+                // color: #6439ff;
+            }
+
+            .icon{
+                font-size: 18px;
+                color: #7451f8;
+            }
+
+            span{
+                font-size: 12px;
+                font-weight: 600;
+                color: #888;
+                margin-left: 10px;
+            }
+        }
+    }
+  }
+
+
+  .bottom{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+
+    .colorOption{
+        height: 20px;
+        width: 20px;
+        border-radius: 5px;
+        border: 1px solid #6439ff;
+        cursor: pointer;
+        margin: 5px;
+
+        &:nth-child(1){
+            background-color: white;
+        }
+
+        &:nth-child(2){
+            background-color: rgb(39, 38, 38);
+        }
+    }
+  }
+
+
+}

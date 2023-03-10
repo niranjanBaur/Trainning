@@ -29,11 +29,13 @@ const Login = () => {
       if (res?.data?.data) {
         // console.log(res?.data.data[0].email);
 
-        document.cookie = `email=${res?.data.data[0].email}`;
+        // document.cookie = `email=${res?.data.data[0].email}`;
+        sessionStorage.setItem("userID", res?.data.data[0].id);
+        console.log(res?.data.data[0]);
         navigate("/");
       }
     }).then(() => {
-      // console.log(user);
+      console.log(user);
     });
   };
 

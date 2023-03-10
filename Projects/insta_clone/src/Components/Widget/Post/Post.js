@@ -31,7 +31,7 @@ const ExpandMore = styled((props) => {
 
 export default function Post() {
   const [posts, setPosts] = useState([]);
-
+  const [users , setUsers] = useState([])
   useEffect(() => {
     const fetchAllPosts = async () => {
       try {
@@ -46,12 +46,24 @@ export default function Post() {
       }
     };
 
+    const fetchAllUsers = async () => {
+      await axios.get("http://localhost:8000/users").then((res)=>{
+        setUsers(res?.data)
+      }).catch((err)=>{
+        console.log(err)
+      })
+    }
+
     fetchAllPosts();
+    fetchAllUsers();
   }, []);
 
   return (
     <>
       {posts?.slice(0).reverse().map((post) => {
+
+        const user = users.find(user => user.id === post.userId);
+        
         return (
           <Card key={post.post_id} sx={{ maxWidth: 400, height: "auto" ,marginBottom:"30px"}}>
             <CardHeader
@@ -65,7 +77,7 @@ export default function Post() {
                   <MoreVertIcon />
                 </IconButton>
               }
-              title="Shrimp and Chorizo Paella"
+              title={user?.username}
               subheader={post.post_create_date}
             />
             <CardMedia

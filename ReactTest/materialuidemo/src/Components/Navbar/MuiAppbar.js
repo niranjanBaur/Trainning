@@ -21,7 +21,7 @@ export default class MuiAppbar extends Component {
             <PhotoCamera />
             <Typography variant="h6" sx={{marginLeft:'10px'}}>Photo Album</Typography>
 
-            {/* text color not working */}
+            {/* text color is not working */}
             <Tabs textColor="#fff" sx={{margin:'auto'}}>
               <Tab label="Home" />
               <Tab label="Services" />

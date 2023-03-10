@@ -94,9 +94,9 @@ app.post("/login", (req, res) => {
 
 //Hello guys this is my first post on Instagram.
 app.post("/createpost", (req, res) => {
-  // console.log(req)
-  const q = "INSERT INTO post (`post_img`,`post_desc`,`post_create_date`) VALUES (?)";
-  const values = [req.body.url, req.body.description,req.body.create_at];
+  console.log(req)
+  const q = "INSERT INTO post (`post_img`,`post_desc`,`post_create_date`,`userId`) VALUES (?)";
+  const values = [req.body.url, req.body.description,req.body.createdDate,req.body.userID];
 
   db.query(q, [values], (err, data) => {
     if (err) return res.json(err);

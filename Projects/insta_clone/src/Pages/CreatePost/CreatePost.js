@@ -31,12 +31,15 @@ const CreatePost = () => {
 
   // console.log(file);
 
+  let x = sessionStorage.getItem("userID");
+  x = parseInt(x);
+
+  console.log(typeof x);
+
   const onSubmit = (e) => {
-    
-    e.preventDefault()
+    e.preventDefault();
 
     if (file && description) {
-
       const formData = new FormData();
 
       formData.append("file", file);
@@ -53,11 +56,33 @@ const CreatePost = () => {
           // console.log(res.data);
           // console.log("hello");
           const url = res?.data.secure_url;
-          const createdDate = res?.data.created_at;
-          console.log(url);
+          // const createdDate = res?.data.created_at;
+          var currentdate = new Date();
+          var datetime =
+            currentdate.getFullYear() +
+            "-" +
+            (currentdate.getMonth() + 1) +
+            "-" +
+            currentdate.getDate() +
+            " " +
+            currentdate.getHours() +
+            ":" +
+            currentdate.getMinutes() +
+            ":" +
+            currentdate.getSeconds();
+          const createdDate = datetime;
+          let userID = sessionStorage.getItem("userID");
+          userID = parseInt(userID);
+          // console.log(url);
+          // console.log(userID);
 
           axios
-            .post("http://localhost:8000/createpost", { url, description ,createdDate})
+            .post("http://localhost:8000/createpost", {
+              url,
+              description,
+              createdDate,
+              userID,
+            })
             .then((res) => {
               setLoading(false);
               // console.log(res);
@@ -122,7 +147,6 @@ const CreatePost = () => {
               style={{ borderRadius: "5px" }}
             >
               {loading ? <CircularProgress size={20} thickness={4} /> : "Post"}
-              
             </button>
           </div>
         </div>

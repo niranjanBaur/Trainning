@@ -8,7 +8,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const x = document.cookie;
+    const x = sessionStorage.getItem("userID");
 
     if (x) {
       navigate("/");
@@ -22,7 +22,7 @@ const Home = () => {
       <SideBar />
       <div className="homeCont">
         <Post />
-      </div>
+      </div> 
     </div>
   );
 };

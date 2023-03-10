@@ -57,7 +57,8 @@ const SideBar = () => {
         </div>
         <Link
           onClick={ ()=>{
-            document.cookie = `email=; expires=Thu, 01 Jan 1970 00:00:01`
+            // document.cookie = `email=; expires=Thu, 01 Jan 1970 00:00:01`
+            sessionStorage.clear()
             }
           }
           to="/login"

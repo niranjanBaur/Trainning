@@ -5,16 +5,16 @@ import "./EachDayData.css";
 
 export default function EachDayData() {
   const APP_ID = "32ba0bfed592484379e51106cef3f204";
-  const cnt = 7;
+  // const cnt = 7;
 
   let weatherData = localStorage.getItem("weatherData");
   weatherData = JSON.parse(weatherData);
 
-  let city = weatherData?.data?.name;
+  let city = weatherData?.data?.name || "Kolkata";
 
-  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=32ba0bfed592484379e51106cef3f204&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APP_ID}&units=metric`;
 
-  //   console.log(city);
+  // console.log(city);
 
   const [data, setData] = useState(null);
 
@@ -22,10 +22,14 @@ export default function EachDayData() {
   const lon = weatherData?.data?.coord?.lon;
 
   useEffect(() => {
-    axios.get(url).then((res) => {
-      setData(res?.data);
-    });
-    localStorage.setItem("dailyData",JSON.stringify(data?.list))
+    axios
+      .get(url)
+      .then((res) => {
+        setData(res?.data);
+      })
+      .then(() => {
+        localStorage.setItem("dailyData", JSON.stringify(data?.list));
+      });
   }, [city]);
 
   // console.log(data);
@@ -46,14 +50,14 @@ export default function EachDayData() {
       {dayList.map((res) => {
         return (
           <div className="sevenDayCont">
-            <div className="eachDay"> 
+            <div className="eachDay">
               <div className="dayDetails">
                 <div id="icn">
                   <i class="fa-solid fa-cloud-sun"></i>
                 </div>
                 <div id="temp">{res?.main?.temp}°C</div>
               </div>
-                <div id="date">{res?.dt_txt}</div>
+              <div id="date">{res?.dt_txt}</div>
             </div>
           </div>
         );

@@ -23,9 +23,10 @@ const Register = () => {
     try {
       await axios.post("http://localhost:8000/register", user).then((res) => {
         console.log(res);
-        document.cookie = `email=${res?.data.data[0].email}`;
+        // document.cookie = `email=${res?.data.data[0].email}`;
+        sessionStorage.setItem("userID", res?.data.data[0].id);
         navigate("/");
-      });
+      })
     } catch (err) {
       console.log(err);
     }

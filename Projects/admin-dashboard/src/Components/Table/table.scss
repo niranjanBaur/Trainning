@@ -1,0 +1,66 @@
+.table{
+    .cellWrapper{
+        display: flex;
+        gap :10px;
+        align-items: center;
+
+        .image{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    .status{
+
+        padding: 5px;
+        border-radius: 5px;
+
+        &.Approved{
+            background-color: rgba(0, 128, 0, 0.2);
+            color: green;
+        }
+        &.Pending{
+            background-color: rgba(218, 165, 32, 0.2);
+            color: goldenrod;
+        }
+    }
+}
+
+// const x=useMemo(()=>false,[])
+// Kuljit Singh4:54 PM
+// function SomeComp(){
+//   const [counter,setCounter]=useState(0);
+//   return <div>
+//   <Counter counter={counter} setCounter={setCounter}/>
+//   <SomeExpensiveWidget/>
+//   <SomeExpensiveWidget/>
+//   </div>
+// }
+ 
+// function Counter({counter,setCounter}){
+//   <button onClick={()=>setCounter(counter=>counter+1)}>{counter}</button>
+// }
+// Kuljit Singh4:59 PM
+// function SomeComp({id}){
+//   const [users,setUsers]=useState([]);
+//   useEffect(()=>{
+//     if(!users){
+//       fetch(`someurl/${id}`)
+//     .then(res=>res.json())
+//     .then(data=>setUsers(data))
+//     }
+//   },[id,users])
+ 
+//   {users.map(user=>...)}
+//   </div>
+// function SomeComp(){
+//   const [users,setUsers]=useState([]);
+//   fetch("someurl")
+//     .then(res=>res.json())
+//     .then(data=>setUsers(data))
+//   return <div>
+//   {users.map(user=>...)}
+//   </div>
+// }
