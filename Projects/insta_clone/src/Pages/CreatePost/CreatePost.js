@@ -57,6 +57,7 @@ const CreatePost = () => {
           // console.log("hello");
           const url = res?.data.secure_url;
           // const createdDate = res?.data.created_at;
+          // console.log(typeof  res?.data.created_at , "from createPost 60");
           var currentdate = new Date();
           var datetime =
             currentdate.getFullYear() +

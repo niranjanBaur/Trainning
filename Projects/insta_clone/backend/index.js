@@ -42,6 +42,28 @@ app.get("/posts", (req, res) => {
   });
 })
 
+app.get("/likes", (req, res) => {
+  const q = `SELECT * FROM likes`;
+  db.query(q, (err, data) => {
+    if (err) return res.json(err);
+    return res.json(data);
+  });
+})
+
+app.get("/likecnt/:id", (req,res) => {
+  const postId = req?.params?.id
+  const q = `select count(postId) likecnt from likes where postId=${postId} group by postId;`
+  // console.log(req.params,"req");
+  // console.log(res,"res");
+  db.query(q,(err,data)=>{
+    if (err) return res.json(err);
+    return res.json(data);
+  })
+})
+
+
+
+
 app.post("/register", (req, res) => {
   const q = "INSERT INTO users (`username`,`email`, `password`) VALUES (?)";
   const login = "SELECT * FROM users WHERE email =? AND password =?";
@@ -103,7 +125,20 @@ app.post("/createpost", (req, res) => {
     return res.send(data);
   });
 });
-
+ 
 app.listen(8000, () => {
   console.log("connected to the backend");
 });
+
+app.post("/likeclicked",(req,res)=>{
+  const q = "INSERT INTO likes(`userId`,`postId`) VALUES(?)";
+  const values = [req.body.userId,req.body.postId]
+
+   db.query(q, [values], (err, data) => {
+    if (err) return res.json(err);
+    return res.send(data);
+  });
+
+  // console.log(req);
+}) 
+
