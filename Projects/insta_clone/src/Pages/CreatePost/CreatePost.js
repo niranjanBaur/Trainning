@@ -56,22 +56,22 @@ const CreatePost = () => {
           // console.log(res.data);
           // console.log("hello");
           const url = res?.data.secure_url;
-          // const createdDate = res?.data.created_at;
+          const createdDate = res?.data.created_at;
           // console.log(typeof  res?.data.created_at , "from createPost 60");
-          var currentdate = new Date();
-          var datetime =
-            currentdate.getFullYear() +
-            "-" +
-            (currentdate.getMonth() + 1) +
-            "-" +
-            currentdate.getDate() +
-            " " +
-            currentdate.getHours() +
-            ":" +
-            currentdate.getMinutes() +
-            ":" +
-            currentdate.getSeconds();
-          const createdDate = datetime;
+          // var currentdate = new Date();
+          // var datetime =
+          //   currentdate.getFullYear() +
+          //   "-" +
+          //   (currentdate.getMonth() + 1) +
+          //   "-" +
+          //   currentdate.getDate() +
+          //   " " +
+          //   currentdate.getHours() +
+          //   ":" +
+          //   currentdate.getMinutes() +
+          //   ":" +
+          //   currentdate.getSeconds();
+          // const createdDate = datetime;
           let userID = sessionStorage.getItem("userID");
           userID = parseInt(userID);
           // console.log(url);

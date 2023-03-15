@@ -17,14 +17,15 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 import { DateTime } from "luxon";
-import moment from "moment"
+import moment from "moment";
 
 import axios from "axios";
 
-import TimeAgo from 'javascript-time-ago'
-import en from 'javascript-time-ago/locale/en'
+import TimeAgo from "javascript-time-ago";
+import en from "javascript-time-ago/locale/en";
+import { Link } from "react-router-dom";
 
-TimeAgo.addDefaultLocale(en)
+TimeAgo.addDefaultLocale(en);
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -40,8 +41,9 @@ const ExpandMore = styled((props) => {
 export default function Post() {
   const [posts, setPosts] = useState([]);
   const [users, setUsers] = useState([]);
-  // const [likeCnt , setLikeCnt ] = useState()
   const [likes, setLikes] = useState([]);
+
+  const userId = sessionStorage.getItem("userID");
 
   useEffect(() => {
     const fetchAllPosts = async () => {
@@ -104,12 +106,15 @@ export default function Post() {
         ?.slice(0)
         .reverse()
         .map((post) => {
+          const curDate = new Date();
+
           const user = users.find((user) => user.id === post.userId);
           const like = likes.filter((like) => post.post_id === like.postId);
-          // const { DateTime } = require("luxon");
-          console.log(like.length, "like");
-          const date = DateTime.fromISO(post.post_create_date).toFormat('dd-MM-yyyy').replaceAll("-"," / ")
-          const timeAgo = moment(post.post_create_date, "YYYYMMDD").endOf('day').fromNow();
+          // console.log(like.length, "like");
+          const date = DateTime.fromISO(post.post_create_date)
+            .toFormat("dd-MM-yyyy")
+            .replaceAll("-", " / ");
+          const timeAgo = moment(post.post_create_date, "YYYYMMDD").fromNow();
           // console.log(date);
           return (
             <Card
@@ -118,21 +123,26 @@ export default function Post() {
             >
               <CardHeader
                 avatar={
-                  <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                    R
-                  </Avatar>
+                  <Link style={{textDecoration:"none"}} to={`/users/${user?.id}`}>
+                    <Avatar
+                      sx={{ bgcolor: red[500], fontWeight: "bold" }}
+                      aria-label="recipe"
+                    >
+                      {user?.username.charAt(0).toUpperCase()}
+                    </Avatar>
+                  </Link>
                 }
                 // action={
                 //   <IconButton aria-label="settings">
                 //     <MoreVertIcon />
                 //   </IconButton>
                 // }
+
                 title={`${user?.username}  •  ${timeAgo}`}
                 subheader={date}
-
               />
               <CardContent>
-              <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="text.secondary">
                   {post.post_desc}
                 </Typography>
               </CardContent>

@@ -5,8 +5,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Register from "./Pages/Register/Register";
 import Home from "./Pages/Home/Home";
 import CreatePost from "./Pages/CreatePost/CreatePost";
+import Profile from "./Pages/Profile/Profile";
 
 function App() {
+
+
   return (
     <div className="App">
       <Router>
@@ -16,7 +19,12 @@ function App() {
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
             <Route path="createpost" element={<CreatePost/>} />
+            
+            <Route path="users/">
+              <Route path=":userId" element={<Profile/>}></Route>
+            </Route>
           </Route>
+
         </Routes>
       </Router>
       {/* <SideBar/> */}

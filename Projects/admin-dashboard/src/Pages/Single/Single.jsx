@@ -12,7 +12,7 @@ import List from "../../Components/Table/Table";
 
 const Single = () => {
   return (
-    <div className="single">
+    <div className="single"> 
       <Sidebar />
       <div className="SingleContainer">
         <Navbar />

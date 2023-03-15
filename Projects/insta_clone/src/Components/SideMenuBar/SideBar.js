@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 const SideBar = () => {
   
-  
+  const userId = sessionStorage.getItem("userID")
 
   return (
     <>
@@ -47,7 +47,7 @@ const SideBar = () => {
                 <span>Create</span>
               </li>
             </Link>
-            <Link className="link" to="/">
+            <Link className="link" to={`/users/${userId}`}>
               <li>
                 <AccountCircleRoundedIcon className="icon" />
                 <span>Profile</span>
