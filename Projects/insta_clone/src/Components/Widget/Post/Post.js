@@ -43,7 +43,7 @@ export default function Post() {
   const [users, setUsers] = useState([]);
   const [likes, setLikes] = useState([]);
 
-  const userId = sessionStorage.getItem("userID");
+  const currUserId = sessionStorage.getItem("userID");
 
   useEffect(() => {
     const fetchAllPosts = async () => {
@@ -87,14 +87,34 @@ export default function Post() {
   }, []);
 
   const likeClicked = async (userId, postId) => {
-    axios
-      .post("http://localhost:8000/likeclicked", { userId, postId })
-      .then(() => {
-        axios.get("http://localhost:8000/likes").then((res) => {
-          setLikes(res?.data);
-          // console.log(res ,"from post 67");
+    console.log(postId);
+    console.log(currUserId);
+    console.log(23 === parseInt(postId));
+    console.log(22 === parseInt(currUserId));
+    const check = likes.filter(
+      (like) => {
+        return (like.userId === currUserId) || (like.postId === postId)
+      }
+    );
+
+    // console.log(userId,postId , "from 95");
+    console.log(check) ;
+
+    // if (check.length === 0) {
+      axios
+        .post("http://localhost:8000/likeclicked", { userId, postId })
+        .then(() => {
+          axios.get("http://localhost:8000/likes").then((res) => {
+            setLikes(res?.data);
+            // console.log(res ,"from post 67");
+          });
         });
-      });
+    // }
+    // else{
+
+    // }
+
+    // console.log(check);
     // await axios.post("http://localhost:8000/likeclicked",{userId,postId})
     // console.log();
     // console.log(userId,postId);
@@ -120,10 +140,16 @@ export default function Post() {
             <Card
               key={post.post_id}
               sx={{ maxWidth: 400, height: "auto", marginBottom: "30px" }}
+              onDoubleClick={() => {
+                likeClicked(user?.id, post.post_id);
+              }}
             >
               <CardHeader
                 avatar={
-                  <Link style={{textDecoration:"none"}} to={`/users/${user?.id}`}>
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    to={`/users/${user?.id}`}
+                  >
                     <Avatar
                       sx={{ bgcolor: red[500], fontWeight: "bold" }}
                       aria-label="recipe"
